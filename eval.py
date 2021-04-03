@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import re
 import math
 
@@ -268,10 +270,8 @@ def is_int(token):
     return True
 
 def int(token):
-        if (token == "0" or token == "1" or token == "2" or token == "3" or token == "4" or
-                token == "5" or token == "6" or token == "7" or token == "8" or token == "9"):
-            return True
-        return False
+        digits = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+        return token in digits
 
 def main():
     t = Tokenizer()
