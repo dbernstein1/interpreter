@@ -56,11 +56,9 @@ class Tokenizer:
                return False
        return True
 
-   def int(self, token):
-       if (token == "0" or token == "1" or token == "2" or token == "3" or token == "4" or
-               token == "5" or token == "6" or token == "7" or token == "8" or token == "9"):
-           return True
-       return False
+   def int(token):
+        digits = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+        return token in digits
 
    def is_double(self, token):
        is_double = True
